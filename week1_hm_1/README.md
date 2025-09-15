@@ -8,8 +8,7 @@ conda create -n computer_vision python=2.7
 conda activate computer_vision
 conda install -c menpo opencv=2.4.11
 
-
-
-python week1_hm_1/src/image_resize_show.py ./week1_hm_1/src/assets/LenaRGB.bmp 
+python week1_hm_1/src/image_resize_show.py week1_hm_1/src/assets/LenaRGB.bmp
+python ffmpeg_pipe_play.py ./week1_hm_1/src/assets/w5.avi [--fps 30]
 ```
 
