@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 '''
+Usage: python ffmpeg_pipe_play.py <video_path> [--fps N]
 python ffmpeg_pipe_play.py ./week1_hm_1/src/assets/w5.avi [--fps 30]
 '''
 import sys
@@ -11,9 +12,6 @@ import numpy as np
 import cv2
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python ffmpeg_pipe_play.py <video_path> [--fps N]")
-        return
     path = sys.argv[1]
     fps = None
     if len(sys.argv) >= 4 and sys.argv[2] == '--fps':
@@ -34,8 +32,7 @@ def main():
         'ffmpeg', '-nostdin', '-loglevel', 'error',
         '-i', path,
         '-vf','scale=320:-2',
-        '-f', 'rawvideo', '-pix_fmt', 'bgr24', '-',
-        
+        '-f', 'rawvideo', '-pix_fmt', 'bgr24', '-', 
     ]
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, bufsize=10**8)
 
