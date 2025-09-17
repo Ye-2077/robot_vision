@@ -3,11 +3,6 @@ requirements:
  - python 3.10+
  - numpy-2.2.6 
  - opencv-python-4.12.0.88
-
- usege: python image_resize_show.py <image_path> [scale]
- example: python image_resize_show.py ./test.jpg 0.5
-
- python hw_1/image_resize_show.py hw_1/assets/LenaRGB.bmp
  '''
 
 import cv2
